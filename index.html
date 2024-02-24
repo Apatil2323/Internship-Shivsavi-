@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+  </head>
+
+  <body class="bg-gray-100 bg-blue-500">
+    <nav class="bg-gray-800 p-4">
+      <ul class="flex">
+        <li class="mr-6">
+          <a href="/land_page" class="text-white hover:text-gray-300">Home</a>
+        </li>
+        <li class="mr-6 relative">
+          <a href="#" id="menu" class="text-white hover:text-gray-300">Menu</a>
+          <ul id="submenu" class="absolute bg-gray-800 hidden">
+            <li>
+              <a
+                href="/itemmaster"
+                class="block px-4 py-2 text-white hover:bg-gray-700"
+                >Item Master</a
+              >
+            </li>
+            <li>
+              <a
+                href="/dairycollection"
+                class="block px-4 py-2 text-white hover:bg-gray-700"
+                >Dairy Collection</a
+              >
+            </li>
+            <li>
+              <a
+                href="/deduction"
+                class="block px-4 py-2 text-white hover:bg-gray-700"
+                >Deduction</a
+              >
+            </li>
+            <li>
+              <a
+                href="/ledgeracc"
+                class="block px-4 py-2 text-white hover:bg-gray-700"
+                >Ledger Acc</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/login.html" class="text-white hover:text-gray-300">Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="container mx-auto mt-8 p-4 bg-white w-screen shadow-md bg-blue-300"
+    >
+      <h1 class="text-2xl font-bold mb-4">Item Form</h1>
+      <form id="itemForm" class="max-w-md" action="" method="post">
+        <div class="container mb-4 w-screen flex shadow-md">
+          <div class="w-3/4 mr-2">
+            <label
+              for="itemCode"
+              class="block text-sm font-medium text-gray-600 font-bold"
+              >Item Code</label
+            >
+            <input
+              type="number"
+              id="itemCode"
+              name="itemCode"
+              class="mt-1 p-2 w-full border border-black rounded-md bg-gray-100"
+            />
+          </div>
+
+          <div class="w-3/4 ml-2">
+            <label
+              for="itemName"
+              class="block text-sm font-medium text-gray-600"
+              >Item Name</label
+            >
+            <input
+              type="text"
+              id="itemName"
+              name="itemName"
+              class="mt-1 p-2 w-full border border-black rounded-md bg-gray-100"
+            />
+          </div>
+
+          <div class="w-3/4 ml-2">
+            <label for="barcode" class="block text-sm font-medium text-gray-600"
+              >Barcode</label
+            >
+            <input
+              type="number"
+              id="barcode"
+              name="barcode"
+              class="mt-1 p-2 w-full border-black border rounded-md bg-gray-100"
+            />
+          </div>
+
+          <div class="w-3/4 ml-2">
+            <label for="hsnCode" class="block text-sm font-medium text-gray-600"
+              >HSN Code</label
+            >
+            <input
+              type="number"
+              id="hsnCode"
+              name="hsnCode"
+              class="mt-1 p-2 w-3/4 border-black border rounded-md bg-gray-100"
+            />
+          </div>
+        </div>
+        <div class="w-full">
+          <label for="quantity" class="block text-sm font-medium text-gray-600"
+            >Quantity</label
+          >
+          <input
+            type="text"
+            id="quantity"
+            name="quantity"
+            class="mt-1 p-2 w-full border border-black rounded-md bg-gray-100"
+          />
+        </div>
+
+        <!-- ======================================================================= -->
+
+        <h2>Departments</h2>
+        <div class="container mb-4 w-screen flex shadow-md">
+          <div class="w-full">
+            <label
+              for="deptName"
+              class="block text-sm font-medium text-gray-600"
+              >Department Name</label
+            >
+            <input
+              type="text"
+              id="deptName"
+              name="deptName"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100"
+            />
+          </div>
+          <div class="w-full">
+            <label
+              for="subDeptName"
+              class="block text-sm font-medium text-gray-600"
+              >Sub Department Name</label
+            >
+            <input
+              type="text"
+              id="subDeptName"
+              name="subDeptName"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-2"
+            />
+          </div>
+
+          <div class="w-full">
+            <label
+              for="hsnGroupCode"
+              class="block text-sm font-medium text-gray-600"
+              >HSN Group Code</label
+            >
+            <input
+              type="number"
+              id="hsnGroupCode"
+              name="hsnGroupCode"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-3"
+            />
+          </div>
+        </div>
+        <div class="mb-4 flex">
+          <div class="w-1/2">
+            <label
+              for="packagingCase"
+              class="block text-sm font-medium text-gray-600"
+              >Packaging Case</label
+            >
+            <input
+              type="checkbox"
+              id="packagingCase"
+              name="packagingCase"
+              class="mt-1 p-2"
+            />
+          </div>
+          <div class="w-1/2">
+            <label for="trading" class="block text-sm font-medium text-gray-600"
+              >Trading</label
+            >
+            <input
+              type="checkbox"
+              id="trading"
+              name="trading"
+              class="mt-1 p-2"
+            />
+          </div>
+          <div class="w-1/2">
+            <label for="trading" class="block text-sm font-medium text-gray-600"
+              >Consumable</label
+            >
+            <input
+              type="checkbox"
+              id="consumable"
+              name="consumable"
+              class="mt-1 p-2"
+            />
+          </div>
+        </div>
+
+        <div class="container mb-4 w-screen flex shadow-md">
+          <div class="w-full">
+            <label
+              for="pacunit"
+              class="block text-sm font-medium text-gray-600 px-4"
+              >Package Unit</label
+            >
+            <input
+              type="text"
+              id="pacunit"
+              name="pacunit"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-2"
+            />
+          </div>
+          <div class="w-full">
+            <label
+              for="LooseUnit"
+              class="block text-sm font-medium text-gray-600 px-4"
+              >Loose Unit</label
+            >
+            <input
+              type="text"
+              id="looseunit"
+              name="looseunit"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-3"
+            />
+          </div>
+
+          <div class="w-full">
+            <label
+              for="convfactor"
+              class="block text-sm font-medium text-gray-600 px-4"
+              >Conv.Factor</label
+            >
+            <input
+              type="text"
+              id="convfactor"
+              name="convfactor"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-4"
+            />
+          </div>
+        </div>
+        <div class="w-full">
+          <label for="cratesltr" class="block text-sm font-medium text-gray-600"
+            >Crates/Ltr
+          </label>
+          <input
+            type="text"
+            id="cratesltr"
+            name="cratesltr"
+            class="mt-1 p-2 w-full border border-black rounded-md bg-gray-100"
+          />
+        </div>
+        <div class="container mb-4 w-screen flex shadow-md">
+          <div class="w-full">
+            <label
+              for="rate1"
+              class="block text-sm font-medium text-gray-600 px-4"
+              >Rate 1:
+            </label>
+            <input
+              type="text"
+              id="rate1"
+              name="rate1"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-2"
+            />
+          </div>
+          <div class="w-full">
+            <label
+              for="rate2"
+              class="block text-sm font-medium text-gray-600 px-4"
+              >Rate 2:
+            </label>
+            <input
+              type="text"
+              id="rate2"
+              name="rate2"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-3"
+            />
+          </div>
+
+          <div class="w-full">
+            <label
+              for="rate3"
+              class="block text-sm font-medium text-gray-600 px-4"
+              >Rate 3:
+            </label>
+            <input
+              type="text"
+              id="rate3"
+              name="rate3"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-4"
+            />
+          </div>
+        </div>
+        <div class="container mb-4 w-screen flex shadow-md">
+          <div class="w-full">
+            <label
+              for="tax"
+              class="block text-sm font-medium text-gray-600 px-4"
+              >Tax:
+            </label>
+            <input
+              type="text"
+              id="tax"
+              name="tax"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-4"
+            />
+          </div>
+          <div class="w-full">
+            <label
+              for="taxontax"
+              class="block text-sm font-medium text-gray-600 px-4"
+              >Tax on tax :
+            </label>
+            <input
+              type="text"
+              id="taxontax"
+              name="taxontax"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-4"
+            />
+          </div>
+          <div class="w-full">
+            <label
+              for="addtax"
+              class="block text-sm font-medium text-gray-600 px-4"
+              >Additional Tax:
+            </label>
+            <input
+              type="text"
+              id="addtax"
+              name="addtax"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-4"
+            />
+          </div>
+        </div>
+
+        <div class="container mb-4 w-screen flex shadow-md">
+          <label for="salesGroup">Select Sales Group:</label>
+          <select id="salesGroup" name="salesGroup">
+            <option value="nothing">Open this select menu</option>
+            <option value="ONE">ONE</option>
+            <option value="TWO">TWO</option>
+            <option value="THREE">THREE</option>
+          </select>
+          <label for="purchaseGroup">Select Purchase Group:</label>
+          <select id="purchaseGroup" name="purchaseGroup">
+            <option value="nothing">Open this select menu</option>
+            <option value="ONE">One</option>
+            <option value="TWO">Two</option>
+            <option value="THREE">Three</option>
+          </select>
+        </div>
+
+        <h2>Stock Information :</h2>
+        <div class="container mb-4 w-screen flex shadow-md">
+          <div class="w-full">
+            <label for="reorder" class="block text-sm font-medium text-gray-600"
+              >Reorder Stock</label
+            >
+            <input
+              type="text"
+              id="reorder"
+              name="reorder"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100"
+            />
+          </div>
+          <div class="w-full">
+            <label for="opstock" class="block text-sm font-medium text-gray-600"
+              >OP Stock :
+            </label>
+            <input
+              type="text"
+              id="opstock"
+              name="opstock"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-2"
+            />
+          </div>
+
+          <div class="w-full">
+            <label for="maxrate" class="block text-sm font-medium text-gray-600"
+              >Max Rate :</label
+            >
+            <input
+              type="text"
+              id="maxrate"
+              name="maxrate"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-3"
+            />
+          </div>
+          <div class="w-full">
+            <label
+              for="recorder"
+              class="block text-sm font-medium text-gray-600"
+              >Recorder Level :
+            </label>
+            <input
+              type="text"
+              id="recorder"
+              name="recorder"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-3"
+            />
+          </div>
+          <div class="w-full">
+            <label
+              for="loosestock"
+              class="block text-sm font-medium text-gray-600"
+              >Loose Stock :
+            </label>
+            <input
+              type="text"
+              id="loosestock"
+              name="loosestock"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-3"
+            />
+          </div>
+          <div class="w-full">
+            <label for="oprate" class="block text-sm font-medium text-gray-600"
+              >OP Rate :
+            </label>
+            <input
+              type="text"
+              id="oprate"
+              name="oprate"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-3"
+            />
+          </div>
+          <div class="w-full">
+            <label
+              for="opamount"
+              class="block text-sm font-medium text-gray-600"
+              >OP Amount :
+            </label>
+            <input
+              type="text"
+              id="opamount"
+              name="opamount"
+              class="mt-1 p-2 w-3/4 border border-black rounded-md bg-gray-100 mx-3"
+            />
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+        >
+          ADD
+        </button>
+
+        <button
+          type="button"
+          onclick="window.location.href = 'http://www.electrofieldinfotech.com/erpapp/home.html';"
+          class="bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring focus:border-blue-300"
+        >
+          EXIT
+        </button>
+      </form>
+
+      <div class="container mx-auto mt-8 p-4 bg-white w-1/3 shadow-md bg-gray-300">
+        <h2 class="text-2xl font-bold mb-4">Search</h2>
+        <div class="flex items-center justify-between mb-4">
+            <input type="number" id="searchItemCode" name="searchItemCode" class="p-2 border border-black rounded-md bg-gray-100" placeholder="Enter Item Code">
+            <button id="searchButton" class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Search</button>
+        </div>
+    </div>
+ 
+
+    <script>
+      document
+        .getElementById("searchButton")
+        .addEventListener("click", function () {
+          const searchTerm = document.getElementById('searchItemCode').value;
+          window.location.href = '/search?searchValue=' + encodeURIComponent(searchTerm)
+        });
+    </script>
+
+    <script>
+      const menu = document.getElementById("menu");
+      const submenu = document.getElementById("submenu");
+
+      menu.addEventListener("mouseenter", () => {
+        submenu.classList.remove("hidden");
+      });
+
+      menu.addEventListener("mouseleave", () => {
+        submenu.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
